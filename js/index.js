@@ -29,7 +29,7 @@ var card = (urlImage, title, plot, director, released, rating) => {
 };
 
 const searchFilm = () => {
-    fetch(`http://www.omdbapi.com/?s=${campoPesquisa.value}&apikey=710681c`, options)
+    fetch(`https://www.omdbapi.com/?s=${campoPesquisa.value}&apikey=710681c`, options)
         .then(res => res.json())
         .then(res => {
             console.log(res)
@@ -45,7 +45,7 @@ const searchFilm = () => {
                     `;
             } else {
                 for(let i = 0; i < res.Search.length; i++) {
-                    fetch(`http://www.omdbapi.com/?i=${res.Search[i].imdbID}&apikey=710681c`, options)
+                    fetch(`https://www.omdbapi.com/?i=${res.Search[i].imdbID}&apikey=710681c`, options)
                         .then(resFilm => resFilm.json())
                         .then(resFilm => {
                             card(resFilm.Poster, resFilm.Title, resFilm.Plot, resFilm.Director, resFilm.Released, resFilm.imdbRating);
@@ -66,7 +66,7 @@ botaoPesquisar.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () =>  {
     bodyName.innerHTML = 'FEATURED MOVIES';
     primeiraLista.forEach(film => {
-        fetch(`http://www.omdbapi.com/?i=${film}&apikey=710681c`, options)
+        fetch(`https://www.omdbapi.com/?i=${film}&apikey=710681c`, options)
             .then(res => res.json())
             .then(res => card(res.Poster, res.Title, res.Plot, res.Director, res.Released, res.imdbRating))
             .catch(err => {
