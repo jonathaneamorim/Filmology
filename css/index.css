@@ -1,0 +1,30 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+.exo-2{
+  font-family: "Exo 2", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.card {
+    width: 260px;
+    height: 600px;
+    display: flex;
+}
+
+.card-text{
+    font-size: 18px;
+}
+
+#filmList {
+    width: 90%;
+}
+
+footer {
+    height: 10vh;
+    margin: 100px 0px 0px 0px;
+}

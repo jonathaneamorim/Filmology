@@ -1,0 +1,10 @@
+@media (max-width: 1200px) {
+    .bodyBox {
+        justify-content: center;        
+    }
+    #filmList {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
